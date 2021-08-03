@@ -1,17 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 function Header() {
-    return (
-    <div className="header">
-        <h1>Character Creator</h1>
+  return (
+    <div className="Header">
+      <h1>Character Creator</h1>
+      <div className="">
         <nav>
-        <NavLink exact to="/">Home</NavLink>
-        <NavLink to="/character">Characters</NavLink>
-        <NavLink to="/campaign">Campaign</NavLink>
+          <NavLink exact to="/">
+            ✦Home✦
+          </NavLink>
+          <NavLink to="/character"> ✦Characters✦ </NavLink>
+          <NavLink to="/campaign"> ✦Campaign✦ </NavLink>
         </nav>
+      </div>
     </div>
-    )
+  );
 }
 
-export default Header
+export default Header;
