@@ -8,6 +8,9 @@ function CharacterCreator() {
   return (
     <div>
       <h1>Character creator</h1>
+      <form>
+        
+        </form>
     </div>
   );
 }
