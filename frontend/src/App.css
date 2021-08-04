@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 
-  background-image: url("./background_image.jpeg");
+  background-color: transparent;
   background-repeat: repeat-x;
 }
 .Application {
