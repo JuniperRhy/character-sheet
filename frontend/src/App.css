@@ -71,7 +71,7 @@ code {
 
 .ccnavlink:hover {
   text-transform: uppercase;
-  background-image: url("https://media4.giphy.com/media/xThtajtWG4NvcL1LaM/giphy.gif?cid=790b761153bfb649eee589931d19995d1e4e0118816fffbc&rid=giphy.gif&ct=g");
+  background-image: url("https://cdn.kapwing.com/final_610ae25bda8c1c00a3669be9_620137.gif");
   background-size: 400%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -103,7 +103,7 @@ code {
 
 .submitbtn:hover {
   color: goldenrod;
-  background-image: url("https://cdn.kapwing.com/final_610a9d7a0d80ea00778bceb7_884361.gif");
+  background-image: url("https://cdn.kapwing.com/final_610ae25bda8c1c00a3669be9_620137.gif");
 }
 
 a:link {
