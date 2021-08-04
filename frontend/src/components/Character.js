@@ -11,11 +11,9 @@ function Character() {
     <div>
         <h1>My Character</h1>
        <h2>Test characters</h2>
-           
     </div>
     )
 
 }
-
 
 export default Character
