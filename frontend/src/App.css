@@ -1,9 +1,3 @@
-.App {
-  text-align: center;
-
-  background-color: transparent;
-  background-repeat: repeat-x;
-}
 .Application {
   text-align: center;
 }
@@ -37,9 +31,9 @@ code {
   /* position: center; */
   padding: 20px;
   border: 1px transparent;
-  border-radius: 10px;
+  border-radius: 30px;
   /* border-bottom: 360%; */
-  background-image: url("https://lh3.googleusercontent.com/4eRgDU2mtwz-AlSz_7JiRrdehlYoDZBASZGModzak9Nlkv_mtAhByKtYSn_EUVRx_L-ZoZY9NL5Ijtk1ctfvhmc38LaLv9rYr5C9NvsHhzC8ROjqLWfOinNTHfJddujiiCV8CsVyKlU9D6mvp67Q8j5k1bqqfhkjTzAfXeWYZ39Q-ncio1leOrimZI4YTJutzyk2WMzTd07P64ZhLuvq6gQYNZUqR1x_MiQWQ5c6iYDX4CJTQU5qecNSfu3uZ-qj7DLwzClWoxcInCJ8XOgxMrJFEmuH2AcmLRZP21kFHQVTsgi10t1Fc6qI5LZLgap9HAG3r2YqaTdX-xirB1iJ51zdixzCu4Rg-j5GtJWojsneTzacCrfs-_qZ9UJCjWAY715DmBex2tLsHWbG4v4EZIshRqKNjGpMmm1dACxU2sIl6UjB4azr05Y8KJei2LnEzValnzkltVU7MuAf2MSPrTWhN9e7HIqmA9X1H1NRv_sl2L-VN8BmAPvqdK48keL_2qvGS7R3jfDG8bxUE5ZxRqn_Bc95cjM0lug9KPeuwJqTUpq3fc2HwVhmyrhkuCUosZFjnod69x92NtPvs24nQC1P0bojG87itE86if3OCvZaToKoviPL1jeE7i8uOzC9RwDCqfQ1QkUmiYznj4NXgeR0oQq7LYE-ldCY0l8fhTXh5JAgvhYmkghALeneJmUo-P_2SEQmJaCFlDpb2D2Aw78=w1106-h911-no?authuser=0");
+  background-image: url("https://cutewallpaper.org/21/ancient-paper-wallpapers/Best-53-Parchment-Wallpaper-on-HipWallpaper-Old-West-.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-bottom: 45%;
@@ -47,7 +41,20 @@ code {
   margin-bottom: 15%;
   padding-left: 20px;
   padding-right: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
+
+.App {
+  flex: 1;
+  text-align: center;
+
+  background-color: transparent;
+}
+
 #rooted {
   font-family: "HalfElven";
   text-transform: uppercase;
@@ -56,12 +63,14 @@ code {
 }
 
 .Header {
+  flex: 1;
   color: rgb(105, 2, 16);
   margin: 2px;
   background-image: transparent;
 }
 
 a:link {
+  flex: 2;
   color: rgb(105, 2, 16);
   text-transform: uppercase;
 }
