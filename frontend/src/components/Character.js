@@ -10,7 +10,7 @@ function Character() {
   return (
     <div>
       <NavLink to="/charactercreator">
-        <h2>✦Create New Character✦ </h2>
+        <h2 className="ccnavlink">✦Create New Character✦ </h2>
       </NavLink>
       <h1>My Characters</h1>
       <h2>Test characters</h2>

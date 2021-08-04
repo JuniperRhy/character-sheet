@@ -69,6 +69,15 @@ code {
   background-image: transparent;
 }
 
+.ccnavlink:hover {
+  text-transform: uppercase;
+  background-image: url("https://media4.giphy.com/media/xThtajtWG4NvcL1LaM/giphy.gif?cid=790b761153bfb649eee589931d19995d1e4e0118816fffbc&rid=giphy.gif&ct=g");
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .charactercreator {
   display: flex;
   flex-direction: column;
