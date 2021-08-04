@@ -1,38 +1,86 @@
 .App {
   text-align: center;
+
+  background-color: transparent;
+  background-repeat: repeat-x;
+}
+.Application {
+  text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* padding: 25px;
+  background-image: url("./background_image.jpeg");
+  background-position: 
+  background-repeat: no-repeat;
+  background-size: 75em; */
+  background-color: black;
+  background-position: center center;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.kapwing.com/final_6109c68a19dbab004db74580_394873.gif");
+  background-size: 100% 100%;
+  text-transform: uppercase;
+  font-family: "HalfElven";
+  font-size: 25px;
+  color: rgb(105, 2, 16);
+  /* overflow: hidden; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: "HalfElven";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#root {
+  margin: auto;
+  width: 50%;
+  /* position: center; */
+  padding: 20px;
+  border: 1px transparent;
+  border-radius: 10px;
+  /* border-bottom: 360%; */
+  background-image: url("https://lh3.googleusercontent.com/4eRgDU2mtwz-AlSz_7JiRrdehlYoDZBASZGModzak9Nlkv_mtAhByKtYSn_EUVRx_L-ZoZY9NL5Ijtk1ctfvhmc38LaLv9rYr5C9NvsHhzC8ROjqLWfOinNTHfJddujiiCV8CsVyKlU9D6mvp67Q8j5k1bqqfhkjTzAfXeWYZ39Q-ncio1leOrimZI4YTJutzyk2WMzTd07P64ZhLuvq6gQYNZUqR1x_MiQWQ5c6iYDX4CJTQU5qecNSfu3uZ-qj7DLwzClWoxcInCJ8XOgxMrJFEmuH2AcmLRZP21kFHQVTsgi10t1Fc6qI5LZLgap9HAG3r2YqaTdX-xirB1iJ51zdixzCu4Rg-j5GtJWojsneTzacCrfs-_qZ9UJCjWAY715DmBex2tLsHWbG4v4EZIshRqKNjGpMmm1dACxU2sIl6UjB4azr05Y8KJei2LnEzValnzkltVU7MuAf2MSPrTWhN9e7HIqmA9X1H1NRv_sl2L-VN8BmAPvqdK48keL_2qvGS7R3jfDG8bxUE5ZxRqn_Bc95cjM0lug9KPeuwJqTUpq3fc2HwVhmyrhkuCUosZFjnod69x92NtPvs24nQC1P0bojG87itE86if3OCvZaToKoviPL1jeE7i8uOzC9RwDCqfQ1QkUmiYznj4NXgeR0oQq7LYE-ldCY0l8fhTXh5JAgvhYmkghALeneJmUo-P_2SEQmJaCFlDpb2D2Aw78=w1106-h911-no?authuser=0");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 45%;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  padding-left: 20px;
+  padding-right: 20%;
+}
+#rooted {
+  font-family: "HalfElven";
+  text-transform: uppercase;
+  font-size: 50px;
+  color: rgb(105, 2, 16);
 }
 
-.App-link {
-  color: #61dafb;
+.Header {
+  color: rgb(105, 2, 16);
+  margin: 2px;
+  background-image: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:link {
+  color: rgb(105, 2, 16);
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: rgb(102, 98, 43);
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-transform: uppercase;
+  background-image: url("");
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@font-face {
+  font-family: "HalfElven";
+  src: url("./HalfElven-gzj4.ttf");
 }
