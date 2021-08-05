@@ -1,7 +1,10 @@
 .Application {
   text-align: center;
 }
+.card {
+  border: 1px solid;
 
+}
 body {
   /* padding: 25px;
   background-image: url("./background_image.jpeg");
