@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 
 function Character({handleClick, chars, myCharacters}) {
-  const paramsPort = useParams();
+
 
   console.log(chars)
 
@@ -42,7 +42,7 @@ function Character({handleClick, chars, myCharacters}) {
         })
       }     
         </div>
-        <h1>Add to Character Collection</h1>
+        
     </div>
   );
 }
