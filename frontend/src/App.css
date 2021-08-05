@@ -72,6 +72,50 @@ code {
   background-image: transparent;
 }
 
+.ccnavlink:hover {
+  text-transform: uppercase;
+  background-image: url("https://cdn.kapwing.com/final_610ae25bda8c1c00a3669be9_620137.gif");
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.charactercreator {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.inputfield {
+  font-size: 20px;
+  background-color: transparent;
+  color: rgb(105, 2, 16);
+  text-transform: uppercase;
+  font-family: "HalfElven";
+  border: 1px solid;
+}
+.input-field {
+  font-size: 20px;
+  background-color: transparent;
+  color: rgb(105, 2, 16);
+  font-family: "HalfElven";
+  border: 1px solid;
+}
+
+.submitbtn {
+  font-size: 20px;
+  background-color: transparent;
+  color: rgb(105, 2, 16);
+  text-transform: uppercase;
+  font-family: "HalfElven";
+}
+
+.submitbtn:hover {
+  color: goldenrod;
+  background-image: url("https://cdn.kapwing.com/final_610ae25bda8c1c00a3669be9_620137.gif");
+}
+
 a:link {
   flex: 2;
   color: rgb(105, 2, 16);
@@ -85,7 +129,7 @@ a:visited {
 
 a:hover {
   text-transform: uppercase;
-  background-image: url("");
+  background-image: url("https://cdn.kapwing.com/final_610a9d7a0d80ea00778bceb7_884361.gif");
   background-size: 400%;
   background-clip: text;
   -webkit-background-clip: text;

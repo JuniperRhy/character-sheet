@@ -1,5 +1,6 @@
 import Header from "./Header";
 import MainPage from "./MainPage";
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 
 function App() {
@@ -35,6 +36,23 @@ function App() {
   // //  const updatePortfolioDeets = [...myCharacters]
   //  setMyCharacters(updateCharacters)
   // }}
+=======
+import { useEffect } from "react";
+import React from "react";
+import "./App.css";
+import Login from "./Login/Login";
+import useToken from "./useToken";
+
+function App() {
+  useEffect(() => {
+    fetch("http://localhost:9292").then((response) => console.log("hello!"));
+  });
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
+>>>>>>> a0744b2de3288e0bf23e1a9b17cdbfaa6f40555b
 
   return (
     <div className="Application">

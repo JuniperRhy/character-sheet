@@ -1,10 +1,12 @@
 import { Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Campaign() {
   return (
     <div>
       <h2>Campaign Manager</h2>
-      <h3> ✦Create a new campaign✦ </h3>
+      <NavLink to="/campaigncreator"> ✦Create a new campaign✦ </NavLink>
+      <h3>Campaigns</h3>
     </div>
   );
 }
