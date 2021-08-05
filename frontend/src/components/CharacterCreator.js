@@ -6,13 +6,6 @@ function CharacterCreator() {
   console.log(paramsPort, "Test");
 
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Character creator</h1>
-      <form>
-        
-        </form>
-=======
     <div className="charactercreator">
       <h2>Character Creator</h2>
       <form>
@@ -88,7 +81,6 @@ function CharacterCreator() {
         <br></br>
         <input className="submitbtn" type="submit" value="Submit" />
       </form>
->>>>>>> a0744b2de3288e0bf23e1a9b17cdbfaa6f40555b
     </div>
   );
 }
