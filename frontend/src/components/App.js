@@ -1,6 +1,6 @@
 import Header from "./Header";
 import MainPage from "./MainPage";
-import {useEffect } from "react";
+import {useState} from "react";
 import React from "react";
 import "./App.css";
 import Login from "./Login/Login";
