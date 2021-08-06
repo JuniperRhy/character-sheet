@@ -81,6 +81,12 @@ function CharacterCreator() {
         <br></br>
         <input className="submitbtn" type="submit" value="Submit" />
       </form>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }
