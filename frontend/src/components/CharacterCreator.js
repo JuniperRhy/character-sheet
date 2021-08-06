@@ -1,222 +1,167 @@
 import { useParams } from "react-router-dom";
-  import React, { useState } from 'react';
-  import { useHistory } from 'react-router-dom';
-  import CharacterCard from './CharacterCard';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import CharacterCard from "./CharacterCard";
 
-function CharacterCreator({chars, myCharacters}) {
+function CharacterCreator({ chars, myCharacters, props }) {
   const paramsPort = useParams();
   console.log(paramsPort, "Test");
   const history = useHistory();
-  const [characterName, setCharacterName] = useState('');
-  const [race, setRace] = useState('');
-  const [characterClass, setCharacterClass] = useState('');
-  const [alignment, setAlignment] = useState('');
+  const [characterName, setCharacterName] = useState("");
+  const [race, setRace] = useState("");
+  const [characterClass, setCharacterClass] = useState("");
+  const [alignment, setAlignment] = useState("");
   const [strength, setStrength] = useState(0);
   const [dexterity, setDexterity] = useState(0);
   const [constitution, setConstitution] = useState(0);
   const [intelligence, setIntelligence] = useState(0);
   const [wisdom, setWisdom] = useState(0);
   const [charisma, setCharisma] = useState(0);
-  const [personality, setPersonality] = useState('');
-  const [traits, setTraits] = useState('');
-  const [flaws, setFlaws] = useState('');
-  const [equipment, setEquipment] = useState('');
-  
+  const [personality, setPersonality] = useState("");
+  const [traits, setTraits] = useState("");
+  const [flaws, setFlaws] = useState("");
+  const [equipment, setEquipment] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:9393/new_character", {
-      method: 'POST',
+    console.log("buttons", e.target.characterClass.value);
+    fetch(`http://localhost:9393/new_character`, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: 1
-        // characterName,
-        // race,
-        // characterClass,
-        // alignment,
-        // strength,
-        // dexterity,
-        // constitution,
-        // intelligence,
-        // wisdom,
-        // charisma,
-        // personality,
-        // traits,
-        // flaws,
-        // equipment
-      })
+        character_name: e.target.characterName.value,
+        race: e.target.race.value,
+        character_class: e.target.characterClass.value,
+        alignment: e.target.alignment.value,
+        strength: e.target.strength.value,
+        dexterity: e.target.dexterity.value,
+        constitution: e.target.constitution.value,
+        intelligence: e.target.intelligence.value,
+        wisdom: e.target.wisdom.value,
+        charisma: e.target.charisma.value,
+        personality: e.target.personality.value,
+        traits: e.target.traits.value,
+        flaws: e.target.flaws.value,
+        equipment: e.target.equipment.value,
+      }),
     });
-
-    // const parsedBody = await res.json();
-    // myCharacters([...chars, parsedBody]);
-    // history.push('/new_character');
   };
 
+  // const res = await fetch(
+  //   `http://localhost:9393/new_character`,
+  //   {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       // Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       // id: 1
+  //       character_name: characterName,
+  //       race: race,
+  //       character_class: characterClass,
+  //       alignment: alignment,
+  //       strength: strength,
+  //       dexterity: dexterity,
+  //       constitution: constitution,
+  //       intelligence: intelligence,
+  //       wisdom: wisdom,
+  //       charisma: charisma,
+  //       personality: personality,
+  //       traits: traits,
+  //       flaws: flaws,
+  //       equipment: equipment,
+  //     }),
+  //   }.then(() => props.myCharacters())
+  // );
 
+  // const parsedBody = await res.json();
+  // myCharacters([...chars, parsedBody]);
+  // history.push('/new_character');
+  // };
 
-console.log(chars);
+  console.log(chars);
   return (
     <div className="charactercreator">
       <h2>Character Creator</h2>
       <form onSubmit={handleSubmit}>
         <label>
           ✦ Character name:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="characterName" 
-          id="characterName" 
-          value ={characterName} 
-          onChange={(e) => setCharacterName(e.target.value)} />
+          <input name="characterName" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Race:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="race" 
-          id="race" 
-          value ={race} 
-          onChange={(e) => setRace(e.target.value)} />
+          <input name="race" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Class:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="class" 
-          id="class" 
-          value ={characterClass} 
-          onChange={(e) => setCharacterClass(e.target.value)} />
+          <input name="characterClass" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Alignment:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="alignment" 
-          id="alignment" 
-          value ={alignment} 
-          onChange={(e) => setAlignment(e.target.value)} />
+          <input name="alignment" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Strength:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="strength" 
-          id="strength" 
-          value ={strength} 
-          onChange={(e) => setStrength(e.target.value)} />
+          <input name="strength" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Dexterity:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="dexterity" 
-          id="dexterity" 
-          value ={dexterity} 
-          onChange={(e) => setDexterity(e.target.value)} />
+          <input name="dexterity" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Constitution:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="constitution" 
-          id="constitution" 
-          value ={constitution} 
-          onChange={(e) => setConstitution(e.target.value)} />
+          <input name="constitution" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Intelligence:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="intelligence" 
-          id="intelligence" 
-          value ={intelligence} 
-          onChange={(e) => setIntelligence(e.target.value)} />
+          <input name="intelligence" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Wisdom:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="wisdom" 
-          id="wisdom" 
-          value ={wisdom} 
-          onChange={(e) => setWisdom(e.target.value)} />
+          <input name="wisdom" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Charisma:
-          <input 
-          className="inputfield" 
-          type="integer" 
-          name="charisma" 
-          id="charisma" 
-          value ={charisma} 
-          onChange={(e) => setCharisma(e.target.value)} />
+          <input name="charisma" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Personality:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="personality" 
-          id="personality" 
-          value ={personality} 
-          onChange={(e) => setPersonality(e.target.value)} />
+          <input name="personality" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Traits:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="traits" 
-          id="traits" 
-          value ={traits} 
-          onChange={(e) => setTraits(e.target.value)} />
+          <input name="traits" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Flaws:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="flaws" 
-          id="flaws" 
-          value ={flaws} 
-          onChange={(e) => setFlaws(e.target.value)} />
+          <input name="flaws" className="inputfield" type="text" />
         </label>
         <br></br>
         <label>
           ✦ Equipment:
-          <input 
-          className="inputfield" 
-          type="text" 
-          name="equipment" 
-          id="equipment" 
-          value ={equipment} 
-          onChange={(e) => setEquipment(e.target.value)} />
+          <input name="equipment" className="inputfield" type="text" />
         </label>
         <br></br>
-        <button className="submitbtn" type="submit"> Add Your Champion </button>
+        <button className="submitbtn" type="submit">
+          {" "}
+          Add Your Champion{" "}
+        </button>
       </form>
       <br></br>
       <br></br>
