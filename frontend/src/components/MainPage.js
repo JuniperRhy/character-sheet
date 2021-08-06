@@ -52,8 +52,9 @@ return (
             <CharacterCreator />
       </Route>
 
-      <Route exact path="/campaigncreator">
-            <CampaignCreator />
+      <Route exact path="/campaigncreator"component= {
+            () => <CampaignCreator chars = {chars} myCharacters={myCharacters}/>
+          }>
       </Route>
         </Switch>
 </div>

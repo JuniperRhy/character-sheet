@@ -7,9 +7,6 @@ import Login from "./Login/Login";
 import useToken from "./useToken";
 
 function App() {
-  // useEffect(() => {
-  //   fetch("http://localhost:9292").then((response) => console.log("hello!"));
-  // });
   const { token, setToken } = useToken();
 
   if (!token) {

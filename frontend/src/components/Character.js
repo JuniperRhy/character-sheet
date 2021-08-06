@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 
 function Character({ handleClick, chars, myCharacters }) {
-  const paramsPort = useParams();
-
   console.log(chars);
 
   return (
@@ -18,33 +16,29 @@ function Character({ handleClick, chars, myCharacters }) {
 
         {chars.map((eachChar) => {
           return (
-            <div className="charcard">
-              <CharacterCard
-                key={eachChar.id}
-                name={eachChar.character_name}
-                race={eachChar.race}
-                character_class={eachChar.character_class}
-                alignment={eachChar.alignment}
-                strength={eachChar.strength}
-                dexterity={eachChar.dexterity}
-                constitution={eachChar.constitution}
-                intelligence={eachChar.intelligence}
-                wisdom={eachChar.wisdom}
-                charisma={eachChar.charisma}
-                personality={eachChar.personality}
-                traits={eachChar.traits}
-                flaws={eachChar.flaws}
-                equipment={eachChar.equipment}
-                campaign_id={eachChar.campaign_id}
-                player_id={eachChar.player_id}
-                handleClick={handleClick}
-              />
-            </div>
+            <CharacterCard
+              key={eachChar.id}
+              name={eachChar.character_name}
+              race={eachChar.race}
+              character_class={eachChar.character_class}
+              alignment={eachChar.alignment}
+              strength={eachChar.strength}
+              dexterity={eachChar.dexterity}
+              constitution={eachChar.constitution}
+              intelligence={eachChar.intelligence}
+              wisdom={eachChar.wisdom}
+              charisma={eachChar.charisma}
+              personality={eachChar.personality}
+              traits={eachChar.traits}
+              flaws={eachChar.flaws}
+              equipment={eachChar.equipment}
+              campaign_id={eachChar.campaign_id}
+              player_id={eachChar.player_id}
+              handleClick={handleClick}
+            />
           );
         })}
       </div>
-      <img className="closer" src="" alt="" />
-      {/* <h1>Add to Character Collection</h1> */}
     </div>
   );
 }
